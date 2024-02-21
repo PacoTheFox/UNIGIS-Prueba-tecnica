@@ -16,19 +16,6 @@ extension ContentView {
         let dismiss: () -> Void
         
         
-        func formattedReleaseDate(_ dateString: String) -> String {
-          let dateFormatter = DateFormatter()
-          dateFormatter.dateFormat = "yyyy-MM-dd"
-
-          guard let date = dateFormatter.date(from: dateString) else {
-            return dateString
-          }
-
-          dateFormatter.dateStyle = .medium
-          return dateFormatter.string(from: date)
-        }
-
-        
         var body: some View {
             VStack(alignment: .center) {
                 Button(action: {
@@ -50,16 +37,14 @@ extension ContentView {
                         Rectangle()
                             .stroke(Color.colorLine, lineWidth: 3)
                     )
-                //    .padding(.leading, 110)
+
                 VStack() {
                     Text(movie.title)
                         .font(.largeTitle)
-                    //              .padding(.leading, 90)
                         .foregroundColor(.white)
                     
                     Text("\(formattedReleaseDate(movie.release_date))")
                         .font(.subheadline)
-                    //             .padding(.leading,90)
                         .foregroundColor(.colorLine)
                 }
                 Spacer()
@@ -84,7 +69,16 @@ extension ContentView {
             .presentationBackground(.clear)
         }
         
-        
-        
+        func formattedReleaseDate(_ dateString: String) -> String {
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd"
+
+          guard let date = dateFormatter.date(from: dateString) else {
+            return dateString
+          }
+
+          dateFormatter.dateStyle = .medium
+          return dateFormatter.string(from: date)
+        }
     }
 }

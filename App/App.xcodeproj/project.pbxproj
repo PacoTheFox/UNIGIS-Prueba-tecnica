@@ -54,8 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				EE384EA62B8593CD008B8D36 /* CircularProgressView.swift */,
-				EE384EA42B859362008B8D36 /* MovieModalView.swift */,
 				EE384E9E2B852C5E008B8D36 /* InfiniteScrollView.swift */,
+				EE384EA42B859362008B8D36 /* MovieModalView.swift */,
 				EE384EA02B8592F3008B8D36 /* MovieScrollView.swift */,
 				EE384EA92B859422008B8D36 /* StylingView.swift */,
 			);
