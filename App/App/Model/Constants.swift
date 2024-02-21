@@ -2,7 +2,7 @@
 //  Constants.swift
 //  App
 //
-//  Created by Javier Aguirre San Román on 15/02/24.
+//  Created by Francisco Aguirre San Román on 15/02/24.
 //
 
 import Foundation

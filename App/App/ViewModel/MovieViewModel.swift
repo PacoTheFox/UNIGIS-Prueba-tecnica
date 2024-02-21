@@ -1,27 +1,16 @@
 import Foundation
-import SwiftUI
-import Kingfisher
+
 
 class MovieViewModel: ObservableObject {
     @Published var movies: [Movie] = []
     @Published var popularMovies: [Movie] = []
     private let movieFetcher: MovieFetcher
     @Published var currentPage: Int = 1
-    @State var moviesPerPage: Int = 0
-    @Published var genres: [Genre] = []
-    
-    var moviesWithGenres: [MovieWithGenres] {
-        movies.map { movie in
-            let genres = self.genres.filter { genre in
-                movie.genre_ids.contains(genre.id)
-            }
-            return MovieWithGenres(movie: movie, genres: genres)
-        }
-    }
+
     
     init(movieFetcher: MovieFetcher = MovieFetcher()) {
         self.movieFetcher = movieFetcher
-        fetchGenres()
+
     }
     
     

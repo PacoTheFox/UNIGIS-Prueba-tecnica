@@ -2,7 +2,7 @@
 //  AppApp.swift
 //  App
 //
-//  Created by Javier Aguirre San Román on 14/02/24.
+//  Created by Francisco Aguirre San Román on 14/02/24.
 //
 
 import SwiftUI

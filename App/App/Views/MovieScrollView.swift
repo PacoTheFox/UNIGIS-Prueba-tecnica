@@ -2,7 +2,7 @@
 //  MovieScrollView.swift
 //  App
 //
-//  Created by Javier Aguirre San Román on 20/02/24.
+//  Created by Francisco Aguirre San Román on 20/02/24.
 //
 
 import Foundation
