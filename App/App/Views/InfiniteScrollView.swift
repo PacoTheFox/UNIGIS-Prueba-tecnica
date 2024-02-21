@@ -10,21 +10,6 @@ import SwiftUI
 import Kingfisher
 
 extension ContentView {
-    
-    func formattedReleaseDate(_ dateString: String) -> String {
-      let dateFormatter = DateFormatter()
-      dateFormatter.dateFormat = "yyyy-MM-dd"
-
-      guard let date = dateFormatter.date(from: dateString) else {
-        return dateString
-      }
-
-      dateFormatter.dateStyle = .medium
-      return dateFormatter.string(from: date)
-    }
-
-
-
         
     var popularMoviesList: some View {
         ZStack {
@@ -86,7 +71,6 @@ extension ContentView {
                 
                 .listRowSeparator(.hidden)
             }
-            
             .listRowSeparator(.hidden)
             .background(Color.gray.opacity(0.2))
             .listStyle(.plain)
@@ -101,6 +85,17 @@ extension ContentView {
             .listRowSeparator(.hidden)
         }
         .padding(.top, -30)
+    }
+    
+    func formattedReleaseDate(_ dateString: String) -> String {
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "yyyy-MM-dd"
 
+      guard let date = dateFormatter.date(from: dateString) else {
+        return dateString
+      }
+
+      dateFormatter.dateStyle = .medium
+      return dateFormatter.string(from: date)
     }
 }
